@@ -1,9 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "sqlPOST", "sqlPOST.sqlproj", "{CA565911-D0DF-4B8E-8DFE-36EBAA213A1B}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "sqlhttp", "sqlhttp.sqlproj", "{CA565911-D0DF-4B8E-8DFE-36EBAA213A1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EC7332F8-F55D-4017-9CA8-472130D41E74}"
+	ProjectSection(SolutionItems) = preProject
+		readme.txt = readme.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,7 +17,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{CA565911-D0DF-4B8E-8DFE-36EBAA213A1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA565911-D0DF-4B8E-8DFE-36EBAA213A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA565911-D0DF-4B8E-8DFE-36EBAA213A1B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{CA565911-D0DF-4B8E-8DFE-36EBAA213A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA565911-D0DF-4B8E-8DFE-36EBAA213A1B}.Release|Any CPU.Build.0 = Release|Any CPU
@@ -20,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CDE88EF9-1275-4F89-A4BE-68E4F7DE7871}
 	EndGlobalSection
 EndGlobal
