@@ -14,7 +14,7 @@ GET the response from an XML REST Endpoint as XMLSQL type.
 
 <h3>dbo.postxml</h3>
 POST XMLSQL type data to an XML REST Endpoint.
-The XML data may come from a SQL type feed.
+The XML data may come from a SQL type feed, or from the result of a get/post.
 
 ```sql
 	declare @response xml
