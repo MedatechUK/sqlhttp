@@ -63,18 +63,44 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="SQL Scripts" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <Reference Include="System">
+      <GenerateSqlClrDdl>True</GenerateSqlClrDdl>
+    </Reference>
+    <Reference Include="System.Data">
+      <GenerateSqlClrDdl>True</GenerateSqlClrDdl>
+    </Reference>
+    <Reference Include="System.Xml">
+      <GenerateSqlClrDdl>True</GenerateSqlClrDdl>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>\\walrus\nas\PriorityMobile\Server\PriProc6\api\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <GenerateSqlClrDdl>True</GenerateSqlClrDdl>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="post.vb" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="postTest.sql" />
-    <None Include="Setup.sql" />
-    <None Include="getTest.sql" />
+    <None Include="SQL Scripts\getTest.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SQL Scripts\postTest.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SQL Scripts\Setup.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SQL Scripts\handleGET.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
