@@ -6,22 +6,22 @@ An SQL CLR providing Native http GET/POST functionality for MSSQL.
 <h2>Examples</h2>
 <h3>dbo.getxml</h3>
 GET the response from an XML REST Endpoint as XMLSQL type.
-'''SQL
+```SQL
 declare @response xml
 select @response = dbo.getxml('{http://endpoint.ashx}')
-'''
+```
 
 <h3>dbo.postxml</h3>
 POST XMLSQL type data to an XML REST Endpoint.
 The XML data may come from a SQL type feed.
-'''SQL
+```SQL
 declare @response xml
 select @response = dbo.postxml('{http://endpoint.ashx}', {SQLXML_Data})	
-'''
+```
 
 <h3>Handle responses in MS-SQL</h3>
 It is possible to SQL SELECT from the results.
-'''SQL
+```SQL
 declare @response xml
 declare @hdoc int
 
@@ -47,11 +47,11 @@ BEGIN CATCH
 	SELECT 500, ERROR_MESSAGE()
 	
 END CATCH
-'''
+```
 
 <h3>Load responses with a handler endpoint</h3>
 Alternatively you can send the response to a handler endpoint to load the data into Priority.
-'''SQL
+```SQL
 declare @response xml
 declare @hdoc int
 
@@ -81,10 +81,10 @@ BEGIN CATCH
 	SELECT 500, ERROR_MESSAGE()
 
 END CATCH
-'''
+```
 
 <h2>Set-up the sqlHttp CLR library</h2>
-'''SQL
+```SQL
 SET ANSI_NULLS OFF
 SET QUOTED_IDENTIFIER OFF
 GO
@@ -106,4 +106,4 @@ RETURNS [xml] WITH EXECUTE AS CALLER
 AS 
 EXTERNAL NAME [MedatechCLR].[sqlhttp.UserDefinedFunctions].[getxml]
 GO
-'''
+```
