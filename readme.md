@@ -15,6 +15,7 @@ GET the response from an XML REST Endpoint as XMLSQL type.
 <h3>dbo.postxml</h3>
 POST XMLSQL type data to an XML REST Endpoint.
 The XML data may come from a SQL type feed.
+
 ```
 	declare @response xml
 	select @response = dbo.postxml('{http://endpoint.ashx}', {SQLXML_Data})	
@@ -22,6 +23,7 @@ The XML data may come from a SQL type feed.
 
 <h3>Handle responses in MS-SQL</h3>
 It is possible to SQL SELECT from the results.
+
 ```
 	declare @response xml
 	declare @hdoc int
@@ -52,6 +54,7 @@ It is possible to SQL SELECT from the results.
 
 <h3>Load responses with a handler endpoint</h3>
 Alternatively you can send the response to a handler endpoint to load the data into Priority.
+
 ```
 	declare @response xml
 	declare @hdoc int
@@ -85,6 +88,7 @@ Alternatively you can send the response to a handler endpoint to load the data i
 ```
 
 <h2>Set-up the sqlHttp CLR library</h2>
+
 ```
 	SET ANSI_NULLS OFF
 	SET QUOTED_IDENTIFIER OFF
