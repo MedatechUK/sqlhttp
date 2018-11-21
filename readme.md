@@ -7,8 +7,8 @@ An SQL CLR providing Native http GET/POST functionality for MSSQL.
 <h3>dbo.getxml</h3>
 GET the response from an XML REST Endpoint as XMLSQL type.
 <code>
-declare @response xml<br>
-select @response = dbo.getxml('{http://endpoint.ashx}')<br>
+declare @response xml\n
+select @response = dbo.getxml('{http://endpoint.ashx}')\n
 </code>
 
 <h3>dbo.postxml</h3>
