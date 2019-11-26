@@ -11,6 +11,13 @@ GET the response from an XML REST Endpoint as XMLSQL type.
 	declare @response xml
 	select @response = dbo.getxml('{http://endpoint.ashx}')
 ```
+<h3>dbo.postchar</h3>
+POST VARCHAR type data to a REST Endpoint.
+
+```sql
+	declare @response VARCHAR(MAX)
+	select @response = dbo.postchar('{http://endpoint.ashx}', '{String_Data}')	
+```
 
 <h3>dbo.postxml</h3>
 POST XMLSQL type data to an XML REST Endpoint.
@@ -98,6 +105,12 @@ Alternatively you can send the response to a handler endpoint to load the data i
 	FROM '{path_to_dll}\MedatechCLR.dll'
 	WITH PERMISSION_SET = EXTERNAL_ACCESS
 
+	GO
+
+	CREATE FUNCTION [dbo].[postchar](@url [nvarchar](max), @poststr [nvarchar](max))
+	RETURNS [nvarchar](max) WITH EXECUTE AS CALLER
+	AS 
+	EXTERNAL NAME [MedatechCLR].[sqlhttp.UserDefinedFunctions].[postchar]
 	GO
 
 	CREATE FUNCTION [dbo].[postxml](@url [nvarchar](max), @xml [xml])
